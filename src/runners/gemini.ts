@@ -60,7 +60,7 @@ export function runWithGemini(agentDir: string, manifest: AgentManifest, options
   const args: string[] = [];
 
   // Model override (if specified in manifest and not in settings)
-  if (manifest.model?.preferred && !exp.settings.model) {
+  if (manifest.model?.preferred) {
     args.push('--model', manifest.model.preferred);
   }
 
